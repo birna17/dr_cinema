@@ -9,6 +9,8 @@ class Cinemas extends React.Component {
           Cinemas
         </Text>
       </View>
-    )
+    );
   }
 }
+
+export default Cinemas;
