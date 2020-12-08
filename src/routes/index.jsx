@@ -1,10 +1,10 @@
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import Main from '../views/Main';
+import Cinemas from '../views/Cinemas';
 
 const StackNavigator = createStackNavigator({
-  Main,
+  Cinemas,
 });
 
 export default createAppContainer(StackNavigator);
