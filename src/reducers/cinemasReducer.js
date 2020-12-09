@@ -1,6 +1,6 @@
 export default function (state = {}, action) {
   switch (action.type) {
-    case 'get': return state.cinemas = action.payload ;
+    case 'GET': return action.payload;
     default: return state;
   }
 }
