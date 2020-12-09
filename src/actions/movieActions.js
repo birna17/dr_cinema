@@ -1,4 +1,4 @@
-const getData = async () => fetch('http://api.kvikmyndir.is/theaters', {
+const getData = async () => fetch('http://api.kvikmyndir.is/movies', {
   method: 'GET',
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
@@ -6,21 +6,21 @@ const getData = async () => fetch('http://api.kvikmyndir.is/theaters', {
   },
 }).then((response) => response.json());
 
-const getCinemasSuccess = (currentCinemas) => ({
-  type: 'getCinemas',
-  payload: currentCinemas,
+const getMoviesSuccess = (currentMovies, cinemaId) => ({
+  type: 'getMovies',
+  payload: currentMovies.filter((movie) => (movie.showtimes.filter((times) => times.cinema.id === cinemaId)[0] !== undefined)),
 });
 
-export const getCinemas = () => async (dispatch) => {
+export const getMovies = (cinemaId) => async (dispatch) => {
   try {
-    const currentCinemas = await getData();
-    dispatch(getCinemasSuccess(currentCinemas));
+    const currentMovies = await getData();
+    dispatch(getMoviesSuccess(currentMovies, cinemaId));
   } catch (error) {
     console.log(error);
   }
 };
 
-export const setCinema = (id) => ({
-  type: 'setCinema',
+export const setMovie = (id) => ({
+  type: 'setMovie',
   payload: id,
 });
