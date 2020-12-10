@@ -8,7 +8,9 @@ const getData = async () => fetch('http://api.kvikmyndir.is/movies', {
 
 const getMoviesSuccess = (currentMovies, cinemaId) => ({
   type: 'getMovies',
-  payload: currentMovies.filter((movie) => (movie.showtimes.filter((times) => times.cinema.id === cinemaId)[0] !== undefined)),
+  payload: currentMovies.filter(
+    (movie) => (movie.showtimes.filter((times) => times.cinema.id === cinemaId)[0] !== undefined),
+  ),
 });
 
 export const getMovies = (cinemaId) => async (dispatch) => {
@@ -20,7 +22,7 @@ export const getMovies = (cinemaId) => async (dispatch) => {
   }
 };
 
-export const setMovie = (id) => ({
+export const setMovie = (movie) => ({
   type: 'setMovie',
-  payload: id,
+  payload: movie,
 });
