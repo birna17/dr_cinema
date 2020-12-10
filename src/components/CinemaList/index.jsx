@@ -23,7 +23,7 @@ class cinemaList extends React.Component {
             name, website, id,
           },
         }) => (
-          <TouchableHighlight onPress={() => { this.props.setCinema(id); navigation.navigate('CinemaDetails'); }}>
+          <TouchableHighlight onPress={() => { this.props.setCinema(id); navigation.navigate('CinemaDetails', { navigation }); }}>
             <View>
               <Text>{name}</Text>
               <Text>{website}</Text>

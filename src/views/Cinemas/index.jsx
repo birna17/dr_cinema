@@ -10,7 +10,7 @@ class Cinemas extends React.Component {
   }
 
   render() {
-    const { cinemas, navigation } = this.props;
+    const { navigation } = this.props;
     return (
       <View>
         <Text>
@@ -20,6 +20,5 @@ class Cinemas extends React.Component {
     );
   }
 }
-
 
 export default connect(null, { getCinemas })(Cinemas);
