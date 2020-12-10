@@ -15,6 +15,7 @@ class cinemaList extends React.Component {
   render() {
     const { navigation } = this;
     const { cinemas } = this.props;
+    console.log(cinemas);
     return (
       <FlatList
         numColumns={1}

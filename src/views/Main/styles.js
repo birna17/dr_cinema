@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import {
-  graniteGray, freshAir, darkerBlue
+  graniteGray, freshAir, jordyBlue
 } from '../../styles/colors';
 
 export default StyleSheet.create({
@@ -14,14 +14,14 @@ export default StyleSheet.create({
     paddingLeft: 70,
     paddingRight: 70,
     borderRadius: 10,
-    backgroundColor: freshAir,
+    backgroundColor: jordyBlue,
 
   },
   buttonText: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: 'white',
+    color: 'black',
   },
   logo: {
     width: 350,

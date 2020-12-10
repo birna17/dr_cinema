@@ -11,11 +11,11 @@ class MovieDetails extends React.Component {
 
   render() {
     const { movie } = this.props;
-    console.log(movie.omdb);
+    console.log(movie);
     return (
       <View>
         <TouchableHighlight>
-          <Text>{movie.omdb[0].Runtime}</Text>
+          <Text>{movie.item.title}</Text>
         </TouchableHighlight>
       </View>
     );
@@ -23,7 +23,7 @@ class MovieDetails extends React.Component {
 }
 
 const mapStateToProps = (reduxStoreState) => ({
-  movie: reduxStoreState.movies,
+  movie: reduxStoreState.currentMovie,
 });
 
 export default connect(mapStateToProps)(MovieDetails);

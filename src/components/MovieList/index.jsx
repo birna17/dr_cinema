@@ -22,19 +22,16 @@ class MovieList extends React.Component {
         numColumns={1}
         data={movies}
         renderItem={({
-          item: {
-            title,
-            omdb,
-          },
+          item
         }) => (
           <View>
             <TouchableHighlight onPress={() => {
-              console.log(omdb)
-              this.props.setMovie({ omdb });
+              console.log(item)
+              this.props.setMovie({ item });
               this.navigation.navigate('MovieDetails');
             }}
             >
-              <Text>{title}</Text>
+              <Text>{item.title}</Text>
             </TouchableHighlight>
           </View>
 
