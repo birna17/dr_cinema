@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { setCinema } from '../../actions/cinemaActions';
+import styles from './styles';
 
 class cinemaList extends React.Component {
   constructor({ navigation }) {
@@ -23,10 +24,12 @@ class cinemaList extends React.Component {
             name, website, id,
           },
         }) => (
-          <TouchableHighlight onPress={() => { this.props.setCinema(id); navigation.navigate('CinemaDetails', { navigation }); }}>
+          <TouchableHighlight
+            style={styles.container}
+            onPress={() => { this.props.setCinema(id); navigation.navigate('CinemaDetails', { navigation }); }}>
             <View>
-              <Text>{name}</Text>
-              <Text>{website}</Text>
+              <Text style={styles.name}>{name}</Text>
+              <Text style={styles.website}>{website}</Text>
             </View>
           </TouchableHighlight>
         )}

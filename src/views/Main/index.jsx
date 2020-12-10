@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, Image, TouchableHighlight, ScrollView } from 'react-native';
+import {
+  View, Text, TouchableHighlight, ScrollView,
+} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import styles from './styles';
 import logo from '../../resources/LOGO.png';
@@ -8,7 +10,7 @@ class Main extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <View style={{alignItems: 'center'}}>
+        <View style={{ alignItems: 'center' }}>
           <Animatable.Image
             animation="slideInDown"
             iterationCount={1}
@@ -21,7 +23,7 @@ class Main extends React.Component {
               style={styles.button}
               onPress={() => this.props.navigation.navigate('Cinemas')}
             >
-            <Text style={styles.buttonText}>Kvikmyndahús</Text>
+              <Text style={styles.buttonText}>Kvikmyndahús</Text>
             </TouchableHighlight>
             <TouchableHighlight
               style={styles.button}

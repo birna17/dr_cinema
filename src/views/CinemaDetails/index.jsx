@@ -1,9 +1,10 @@
 import React from 'react';
 import {
- View, TouchableHighlight, Text, Image
+  View, TouchableHighlight, Text,
 } from 'react-native';
 import { connect } from 'react-redux';
 import MovieList from '../../components/MovieList';
+import styles from './styles';
 
 class CinemaDetails extends React.Component {
   constructor({ navigation }) {
@@ -20,7 +21,7 @@ class CinemaDetails extends React.Component {
     console.log(currentCinema.id);
     return (
       <View>
-        <TouchableHighlight>
+        <TouchableHighlight style={styles.container}>
           <Text>{currentCinema.name}</Text>
         </TouchableHighlight>
         <MovieList navigation={this.navigation} />
