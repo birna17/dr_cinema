@@ -6,6 +6,8 @@ import { getCinemas } from '../../actions/cinemaActions';
 import CinemaList from '../../components/CinemaList';
 import styles from './styles';
 
+
+
 class Cinemas extends React.Component {
   componentDidMount() {
     this.props.getCinemas();
@@ -20,12 +22,18 @@ class Cinemas extends React.Component {
           animation="slideInDown"
           iterationCount={1}>
           Kvikmyndahús
-          <Animatable.Text/>
-          <CinemaList navigation={navigation} />
         </Animatable.Text>
+        <CinemaList
+          navigation={navigation}
+          onPress={() => navigation.navigate('CinemaDetails', id, name, description, address, phone)}
+        />
       </View>
     );
   }
 }
 
-export default connect(null, { getCinemas })(Cinemas);
+const mapStateToProps = (state) => ({
+  cinemas: state.cinemas
+});
+
+export default connect(mapStateToProps, { getCinemas })(Cinemas);

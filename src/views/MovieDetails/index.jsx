@@ -3,6 +3,7 @@ import {
  View, TouchableHighlight, Text, Image
 } from 'react-native';
 import { connect } from 'react-redux';
+import ShowtimeList from '../../components/ShowtimeList';
 
 class MovieDetails extends React.Component {
   hello(){
@@ -17,6 +18,7 @@ class MovieDetails extends React.Component {
         <TouchableHighlight>
           <Text>{movie.item.title}</Text>
         </TouchableHighlight>
+        <ShowtimeList />
       </View>
     );
   }

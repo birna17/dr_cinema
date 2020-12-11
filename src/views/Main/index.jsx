@@ -16,7 +16,7 @@ class Main extends React.Component {
             iterationCount={1}
             style={styles.logo}
             source={logo}
-            direction="alternative"
+            direction="alternate"
           />
           <View style={{ padding: 20 }}>
             <TouchableHighlight

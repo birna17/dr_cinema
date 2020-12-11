@@ -26,7 +26,7 @@ class MovieList extends React.Component {
         }) => (
           <View>
             <TouchableHighlight onPress={() => {
-              console.log(item)
+              console.log(this.navigation);
               this.props.setMovie({ item });
               this.navigation.navigate('MovieDetails');
             }}
