@@ -6,6 +6,7 @@ import {
 export default StyleSheet.create({
   container: {
     backgroundColor: 'black',
+    flex: 1,
   },
   button: {
     marginTop: 30,
@@ -15,7 +16,8 @@ export default StyleSheet.create({
     paddingRight: 70,
     borderRadius: 10,
     backgroundColor: jordyBlue,
-
+    flexDirection: 'column',
+    alignContent: 'center',
   },
   buttonText: {
     fontSize: 24,
@@ -24,8 +26,9 @@ export default StyleSheet.create({
     color: 'black',
   },
   logo: {
-    width: 350,
-    height: 300,
+    marginTop: 50,
+    width: 200,
+    height: 45,
     alignItems: 'center',
   },
 });

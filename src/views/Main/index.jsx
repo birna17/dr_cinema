@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import styles from './styles';
-import logo from '../../resources/LOGO.png';
+import logo from '../../resources/Logo1.png';
 
 class Main extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class Main extends React.Component {
             style={styles.logo}
             source={logo}
             direction="alternate"
-          />
+            />
           <View style={{ padding: 20 }}>
             <TouchableHighlight
               style={styles.button}
@@ -27,7 +27,7 @@ class Main extends React.Component {
             </TouchableHighlight>
             <TouchableHighlight
               style={styles.button}
-              onPress={() => this.props.navigation.navigate('UpcomingMovies')}
+              onPress={() => this.props.navigation.navigate('ComingSoon')}
             >
               <Text style={styles.buttonText}>Væntanlegar í bíó</Text>
             </TouchableHighlight>
