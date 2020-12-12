@@ -23,26 +23,8 @@ title: {
     color: periwinkle,
     justifyContent: 'center',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 12,
     padding: 5,
-},
-textWrap: {
-    flex: 1,
-    flexDirection: 'row',
-    marginBottom: 5,
-    justifyContent: 'flex-start',
-},
-showingMovies: {
-    color: blueSaphire,
-    marginTop: 20,
-    alignSelf: 'center',
-    fontSize: 20,
-    textDecorationLine: 'underline',
-},
-justifyText: {
-    color: jordyBlue,
-    paddingTop: 7,
-    paddingLeft: 5,
 },
 header: {
     fontSize: 25,
@@ -50,5 +32,5 @@ header: {
     color: periwinkle,
     textAlign: 'center',
     marginTop: 30,
-}
+},
 });

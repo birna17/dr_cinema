@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { getMovies, setMovie } from '../../actions/movieActions';
+import styles from './styles';
 
 class MovieList extends React.Component {
   constructor({ navigation }) {
@@ -31,7 +32,7 @@ class MovieList extends React.Component {
               this.navigation.navigate('MovieDetails');
             }}
             >
-              <Text>{item.title}</Text>
+              <Text style={styles.text}>{item.title}</Text>
             </TouchableHighlight>
           </View>
 

@@ -15,7 +15,8 @@ class cinemaList extends React.Component {
   render() {
     const { navigation } = this;
     const { cinemas } = this.props;
-    console.log(cinemas);
+    console.log((cinemas));
+    cinemas.sort((a, b) => (a.name > b.name));
     return (
       <FlatList
         numColumns={1}

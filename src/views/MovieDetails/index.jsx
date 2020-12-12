@@ -2,22 +2,42 @@ import React from 'react';
 import {
  View, TouchableHighlight, Text, Image
 } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import { connect } from 'react-redux';
 import ShowtimeList from '../../components/ShowtimeList';
+import styles from './styles';
+import GenreList from '../../components/GenreList';
+
 
 class MovieDetails extends React.Component {
-  hello(){
+  hello() {
     this.hello = 'hello';
   }
 
   render() {
     const { movie } = this.props;
-    console.log(movie);
+    console.log(movie.item.omdb[0].Poster);
     return (
-      <View>
-        <TouchableHighlight>
-          <Text>{movie.item.title}</Text>
-        </TouchableHighlight>
+      <View style={styles.container}>
+        <View style={styles.itemContainer}>
+        <Animatable.Text
+          style={styles.header}
+          animation="slideInDown"
+          iterationCount={1}>
+            {movie.item.title}
+        </Animatable.Text>
+        </View>
+        <Image
+          style={styles.image}
+          source={{ uri: movie.item.omdb[0].Poster }} />
+        <Text style={{color: 'white'}}>
+          {movie.item.plot}
+          {'\n'}
+          Duration: {movie.item.durationMinutes} min
+          {'\n'}
+          Year released: {movie.item.year}
+        </Text>
+        <GenreList />
         <ShowtimeList />
       </View>
     );

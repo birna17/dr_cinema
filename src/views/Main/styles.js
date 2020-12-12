@@ -28,9 +28,4 @@ export default StyleSheet.create({
     height: 300,
     alignItems: 'center',
   },
-  slogan: {
-    width: 120,
-    height: 30,
-    alignItems: 'center',
-  },
 });
