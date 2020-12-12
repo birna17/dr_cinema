@@ -47,7 +47,7 @@ class CinemaDetails extends React.Component {
         <TouchableHighlight
           onPress={() => Linking.openURL(`https://${currentCinema.website}`)}
         >
-          <Text style={{color: '#89BBFE'}}>{currentCinema.website}</Text>
+          <Text style={{ color: '#89BBFE' }}>{currentCinema.website}</Text>
         </TouchableHighlight>
         <MovieList
           navigation={this.navigation}

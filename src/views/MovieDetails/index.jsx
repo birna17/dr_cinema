@@ -27,17 +27,21 @@ class MovieDetails extends React.Component {
             {movie.item.title}
         </Animatable.Text>
         </View>
-        <Image
-          style={styles.image}
-          source={{ uri: movie.item.omdb[0].Poster }} />
-        <Text style={{color: 'white'}}>
-          {movie.item.plot}
-          {'\n'}
-          Duration: {movie.item.durationMinutes} min
-          {'\n'}
-          Year released: {movie.item.year}
-        </Text>
+        <View style={{flexDirection: 'row'}}>
+          <Image
+            style={styles.image}
+            source={{ uri: movie.item.omdb[0].Poster }}
+          />
+          <Text style={styles.text}>
+            {movie.item.plot}
+            {'\n'}
+            Duration: {movie.item.durationMinutes} min
+            {'\n'}
+            Year released: {movie.item.year}
+          </Text>
+        </View>
         <GenreList />
+
         <ShowtimeList />
       </View>
     );
